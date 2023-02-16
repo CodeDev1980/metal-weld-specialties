@@ -24,43 +24,7 @@
         <!-- Section: Design Block -->
         <section itemid="project-arizona">
             <div class="row">
-                <div class="col-lg-3 col-md-6 hover-zoom col-sm-12 p-2">
-                    <h4 class="h3 h3-responsive">Arizona</h4>
-                    <% for(i=0; i < arizonaPost.length; i++){ %>
-                    <a href="/singleArizona/<%= arizonaPost[i]._id %>">
-                        <img src="<%= arizonaPost[i].image %>"
-                             class="img-fluid" alt="img">
-                    </a>
-                    <% } %>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 hover-zoom p-2">
-                    <h4 class="h3 h3-responsive">Nevada</h4>
-                    <% for(i=0; i < nevadaPost.length; i++){ %>
-                        <a href="/singleNevada/<%= nevadaPost[i]._id %>">
-                            <img src="<%= nevadaPost[i].image %>"
-                                 class="img-fluid" alt="img">
-                        </a>
-                    <% } %>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 hover-zoom p-2">
-                    <h4 class="h3 h3-responsive">Hawaii</h4>
-                    <% for(i=0; i < hawaiiPost.length; i++){ %>
-                        <a href="/singleHawaii/<%= hawaiiPost[i]._id %>">
-                            <img src="<%= hawaiiPost[i].image %>"
-                                 class="img-fluid" alt="img">
-                        </a>
-                    <% } %>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 hover-zoom p-2">
-                    <h4 class="h3 h3-responsive">California</h4>
-                    <% for(i=0; i < californiaPost.length; i++){ %>
-                        <a href="/singleCalifornia/<%= californiaPost[i]._id %>">
-                            <img src="<%= californiaPost[i].image %>"
-                                 class="img-fluid" alt="img">
-                        </a>
-                    <% } %>
-                </div>
+                <%- include('project-parts/carousel-parts') -%>
             </div>
         </section>
     </div>

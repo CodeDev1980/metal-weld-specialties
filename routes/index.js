@@ -12,6 +12,7 @@ const staffUserController = require('../controllers/adminPage');
 const logoutUserController = require('../controllers/logoutUser');
 // Projects
 const projectsPage = require('../controllers/projectsPage');
+const mainArizona = require('../controllers/arizonaProjectsDB');
 // Arizona
 const storeArizonaController = require('../controllers/storeArizona');
 const deleteArizonaController = require('../controllers/deleteArizona');
@@ -48,6 +49,7 @@ router.get('/staffAccount', authorized, staffUserController)
 router.get('/logout', logoutUserController);
 // Projects
 router.get('/projects', projectsPage);
+router.get('/arizonaProjects', mainArizona)
 // Arizona Projects
 router.post('/store/arizona', storeArizonaController);
 router.get('/delete/arizona/:id', deleteArizonaController);
