@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
     const california = await CaliforniaPost.find({}).limit(3).sort({_id: -1}).populate('userid');
 
     res.render('index', {
-        title: "Stephen's Web Designs",
+        title: "Metal-Weld Specialties",
         nevada, hawaii, arizona, california
     })
 }
