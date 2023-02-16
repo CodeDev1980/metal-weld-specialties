@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+<body>
+<style>
+    body {
+        background: url('https://thumbs.dreamstime.com/b/welding-steel-man-industry-46093385.jpg')
+        no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    h1 {
+        color: white;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+
+<body>
+<!-- Start your project here-->
+<!--Section: Design Block-->
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+        <div class="container-fluid">
+            <a class="navbar-brand bg-white" href="#!">
+                <img src="/img/navLogo.png" height="45px" width="95px" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white"
+                           href="/projects">Projects
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row">
+                    <% if(loggedIn) { %>
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link text-white bg-dark"
+                               aria-current="page" href="/staffAccount">Admin
+                            </a>
+                        </li>
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link text-dark"
+                               aria-current="page" href="/logout">Logout
+                            </a>
+                        </li>
+                    <% } %>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://www.linkedin.com/company/metal-weld-specialties-inc-/about/" target="_blank">
+                            <img src="/img/linkedin.png" class="img-fluid" style="width: 25px; height: 25px;" alt="linkedin profile">
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://www.google.com/maps/place/8137+N+83rd+Ave,+Peoria,+AZ+85345/@33.5549685,-112.2364095,17z/data=!3m1!4b1!4m6!3m5!1s0x872b6a771e1dc811:0x5f25c223e490ee5e!8m2!3d33.554964!4d-112.2342155!16s%2Fg%2F11c5nxht9f" target="_blank">
+                            <img src="https://play-lh.googleusercontent.com/Kf8WTct65hFJxBUDm5E-EpYsiDoLQiGGbnuyP6HBNax43YShXti9THPon1YKB6zPYpA=w240-h480-rw" class="img-fluid" style="width: 25px; height: 25px;" alt="linkedin profile">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+</header>
+
+<!--Main layout-->
+<main style="margin-top: 120px; margin-bottom: 70px;">
+    <div class="container text-dark my-5 py-5">
+        <div class="card my-5 m-3">
+            <h1 class="display-3 fw-bold text-center text-dark mb-3" itemid="about us">New User</h1>
+            <% if(errors != null && errors.length > 0){ %>
+                <ul class="list-group text-center list-group-light mb-5">
+                    <% for(i=0; i < errors.length; i++){ %>
+                        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-danger mb-2">
+                            <%= errors[i] %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+            <div class="row justify-content-center text-dark">
+                <div class="col-md-10">
+                    <form method="post" action="/store/user" enctype="multipart/form-data">
+
+                        <!-- Name input -->
+                        <div class="form-outline mb-3">
+                            <input type="text" id="registerName" placeholder="name" required class="form-control" />
+                        </div>
+
+                        <!-- Username input -->
+                        <div class="form-outline mb-3">
+                            <input type="text" name="username" placeholder="username" required id="registerUsername" class="form-control" />
+
+                        </div>
+
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" placeholder="password" required name="password" id="registerPassword" class="form-control" />
+
+                        </div>
+
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-3">Register</button>
+                        <div class="text-center text-dark">
+                            <p>Already a member? <a href="/login" class="text-info font-weight-bold">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--Main layout-->
+
+<%- include('partials/footer') -%>
+
+</body>
+<%- include('partials/scripts') -%>
+</html>

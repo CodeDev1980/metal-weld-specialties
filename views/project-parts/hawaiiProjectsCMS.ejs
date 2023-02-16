@@ -1,0 +1,48 @@
+<div class="container">
+    <h2 class="mb-5">Admin Projects Management</h2>
+    <div class="row mb-7">
+        <div class="col-md-4 p-2">
+            <img src="https://images.unsplash.com/photo-1455165814004-1126a7199f9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2VsZGluZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
+                 class="img-fluid" alt="img">
+        </div>
+        <div class="col-md-8 p-2">
+            <h3>Project Title</h3>
+            <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet beatae, consequatur cupiditate deleniti deserunt distinctio doloribus error eum incidunt maiores modi mollitia, pariatur praesentium quae, ratione recusandae similique totam!
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center text-dark mb-5">
+        <div class="col-md-12">
+            <form action="/store/hawaii" method="POST" enctype="multipart/form-data">
+                <!-- Name input -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-outline mb-3">
+                            <input type="text" required placeholder="Project Title" id="form4Example1" name="title" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-outline mb-3">
+                            <input type="text" required placeholder="Project Location" id="form4Example1" name="location" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Name input -->
+                <div class="form-outline mb-3">
+                    <input type="file" id="form4Example2" name="image" class="form-control" accept="image/*" />
+                </div>
+
+                <!-- Message input -->
+                <div class="form-outline mb-3">
+                    <textarea class="form-control" placeholder="Project Summary" required name="body" id="form4Example3" rows="4"></textarea>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Container for demo purpose -->

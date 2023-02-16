@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+
+<body>
+<!-- Start your project here-->
+<!--Section: Design Block-->
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#!">
+        <img src="/img/navLogo.png" height="65" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-bg-dark" aria-current="page"
+               href="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/projects">Projects</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+          <% if(loggedIn) { %>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link text-white bg-dark"
+                 aria-current="page" href="/staffAccount">Admin
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link text-dark"
+                 aria-current="page" href="/logout">Logout
+              </a>
+            </li>
+          <% } %>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="https://www.linkedin.com/company/metal-weld-specialties-inc-/about/" target="_blank">
+              <img src="/img/linkedin.png" class="img-fluid" style="width: 25px; height: 25px;" alt="linkedin profile">
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="https://www.google.com/maps/place/8137+N+83rd+Ave,+Peoria,+AZ+85345/@33.5549685,-112.2364095,17z/data=!3m1!4b1!4m6!3m5!1s0x872b6a771e1dc811:0x5f25c223e490ee5e!8m2!3d33.554964!4d-112.2342155!16s%2Fg%2F11c5nxht9f" target="_blank">
+              <img src="https://play-lh.googleusercontent.com/Kf8WTct65hFJxBUDm5E-EpYsiDoLQiGGbnuyP6HBNax43YShXti9THPon1YKB6zPYpA=w240-h480-rw" class="img-fluid" style="width: 25px; height: 25px;" alt="linkedin profile">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+</header>
+
+<!--Section: Design Block-->
+<!-- Container for demo purpose -->
+<div class="container-fluid my-5 py-5">
+  <div class="container my-5 py-5" itemid="contact us">
+    <h1 class="display-3 fw-bold text-center mb-3" itemref="contact page">Contact Us</h1>
+
+    <div class="row">
+      <div class="col-md-8 p-2">
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label class="form-label">Your Name: </label>
+            <input type="text" class="form-control" name="name" />
+          </p>
+          <p>
+            <label class="form-label">Your Email: </label>
+            <input type="email" name="email" class="form-control" />
+          </p>
+          <p>
+            <label class="form-label">Message:</label>
+            <textarea name="message" class="form-control" rows="7"></textarea>
+          </p>
+          <p>
+            <button type="submit" class="btn btn-primary w-25">Send</button>
+          </p>
+        </form>
+      </div>
+      <div class="col-md-4 py-5">
+        <img src="https://via.placeholder.com/450x300" class="img-fluid rounded-3 shadow-2-strong mb-3" alt="corporate office">
+        <p>
+          8137 North 83rd Ave <br>
+          Peoria, Arizona 85345
+        </p>
+        <p>
+          Office: 623-979-1117
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Container for demo purpose -->
+
+
+<!-- Footer -->
+<%- include('partials/footer') -%>
+<!-- Footer -->
+
+<!-- End your project here-->
+</body>
+
+<%- include('partials/scripts') -%>
+</html>

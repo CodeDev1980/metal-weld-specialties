@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+
+<body>
+<!-- Start your project here-->
+<!--Section: Design Block-->
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/img/navLogo.png" height="65" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-bg-dark"
+                           aria-current="page" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/contact">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/projects">
+                            Projects
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row">
+                    <% if(loggedIn) { %>
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link text-white bg-dark"
+                               aria-current="page" href="/staffAccount">Admin
+                            </a>
+                        </li>
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link text-dark"
+                               aria-current="page" href="/logout">Logout
+                            </a>
+                        </li>
+                    <% } %>
+
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://www.linkedin.com/company/metal-weld-specialties-inc-/about/about.ejs" target="_blank">
+                            <img src="/img/linkedin.png" class="img-fluid" style="width: 25px; height: 25px;" alt="linkedin profile">
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://www.google.com/maps/place/8137+N+83rd+Ave,+Peoria,+AZ+85345/@33.5549685,-112.2364095,17z/data=!3m1!4b1!4m6!3m5!1s0x872b6a771e1dc811:0x5f25c223e490ee5e!8m2!3d33.554964!4d-112.2342155!16s%2Fg%2F11c5nxht9f" target="_blank">
+                            <img src="https://play-lh.googleusercontent.com/Kf8WTct65hFJxBUDm5E-EpYsiDoLQiGGbnuyP6HBNax43YShXti9THPon1YKB6zPYpA=w240-h480-rw" class="img-fluid" style="width: 25px; height: 25px;" alt="linkedin profile">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+</header>
+
+<!--Section: Design Block-->
+<!-- Container for demo purpose -->
+<div class="container-fluid my-5 py-5">
+    <!-- Container for demo purpose only -->
+    <div class="container pt-5">
+
+        <!-- Section: Design Block -->
+        <section class="mb-5">
+            <style>
+                .rounded-t-2-5 {
+                    border-top-left-radius: 0.75rem;
+                    border-top-right-radius: 0.75rem;
+                }
+                @media (min-width: 992px) {
+                    .rounded-tr-lg-0 {
+                        border-top-right-radius: 0;
+                    }
+                    .rounded-bl-lg-2-5 {
+                        border-bottom-left-radius: 0.75rem;
+                    }
+                }
+            </style>
+            <div class="card rounded-6 shadow-3-soft" style="background-color: #fff9f2">
+                <div class="row g-0 d-flex align-items-center">
+                    <div class="col-lg-6 col-xl-5">
+                        <img src="https://via.placeholder.com/250x350" alt="about us" class="w-100 rounded-t-2-5 rounded-tr-lg-0 rounded-bl-lg-2-5"/>
+                    </div>
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="card-body py-4 py-md-5 py-lg-4 py-xl-5 px-md-5">
+                            <div class="border-top border-dark" style="width: 100px"></div>
+                            <p class="display-4 mt-5 mb-4" style="color: #344e41">About Us</p>
+                            <p>
+                                Metal-Weld Specialties, Inc. <br>
+                                has been servicing the structural steel industry for over 45 years. We maintain an exceptional team of experienced and dedicated employees. Metal-Weld is an AISC certified fabricator and also is an ISO 9001 certified company. In addition, we are an approved fabricator for the City of Phoenix, City of Los Angeles, and Clark County, Nevada. Our headquarters and fabrication plant are located in Peoria, Arizona allowing us to service our customers in Arizona, Nevada, California, and Hawaii.
+                            </p>
+                            <p class="mb-4 pb-2">
+                                Metal-Weld is here to meet and exceed your structural steel fabrication and erection needs. We can fabricate up to 500 tons of steel per week in our plant and have the capability of running in excess of 3,300 man-hours per week. Here is a partial list of our equipment that will help meet your needs:
+                            </p>
+                            <a class="btn btn-lg btn-dark" href="contact.ejs" role="button">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="card p-4">
+                            <div class="row">
+                                <div class="col-md-4 p-2">
+                                    <ul>
+                                        <li>Horizontal Hem Saw w/ W44 capacity</li>
+                                        <li>CNC Franklin Structural Fabricator</li>
+                                        <li>CNC Ficep Drill line w/ W44 capacity</li>
+                                        <li>CNC Amtek Coping Machine</li>
+                                        <li>Cambro cambering machine w/ W44x490 capacity</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 p-2">
+                                    <h2>Certifications & Licenses</h2>
+                                    <img src="/img/certsLogo.png" class="img-fluid" alt="certifications and license">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Design Block -->
+
+    </div>
+    <!-- Container for demo purpose only -->
+</div>
+<!-- Container for demo purpose -->
+
+
+<!-- Footer -->
+<%- include('partials/footer') -%>
+<!-- Footer -->
+
+<!-- End your project here-->
+</body>
+
+<%- include('partials/scripts') -%>
+</html>

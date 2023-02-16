@@ -1,0 +1,99 @@
+<div class="container">
+      <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="text-center">
+          <img
+            class="mb-4"
+            src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png"
+            style="width: 250px; height: 90px;"
+          />
+          <h5 class="mb-3">Thank you for using our product. We're glad you're with us.</h5>
+          <p class="mb-3">MDB Team</p>
+          <a
+            class="btn btn-primary btn-lg"
+            href="https://mdbootstrap.com/docs/standard/getting-started/"
+            target="_blank"
+            role="button"
+            >Start MDB tutorial</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="lightbox">
+                    <div class="row text-center">
+                        <div class="col-lg-4">
+                            <h2>Laveen</h2>
+                            <!--                        <a href="projectA.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                            <h2>ClubHouse</h2>
+                            <!--                        <a href="projectA.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                        </div>
+                        <div class="col-lg-4">
+                            <h2>FlagStaff Medical</h2>
+                            <!--                        <a href="projectA.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                            <h2>GCC Science Building</h2>
+                            <!--                        <a href="projectA.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                        </div>
+                        <div class="col-lg-4">
+                            <h2>Luke AFB</h2>
+                            <!--                        <a href="projectA.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                            <h2>NAU Science Building</h2>
+                            <!--                        <a href="projectA.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                        </div>
+                    </div>
+                    <div class="row mt-5 text-center">
+                        <div class="col-lg-4">
+                            <h2>Hard Rock</h2>
+                            <!--            <a href="projectC.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                            <h2>Hard Rock</h2>
+                            <!--            <a href="projectC.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                        </div>
+                        <div class="col-lg-4">
+                            <h2>Playa Vista</h2>
+                            <!--            <a href="projectC.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                            <h2>Playa Vista</h2>
+                            <!--            <a href="projectC.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                        </div>
+                        <div class="col-lg-4">
+                            <h2>Lucky Dragon</h2>
+                            <!--            <a href="projectC.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                            <h2>Lucky Dragon</h2>
+                            <!--            <a href="projectC.html" class="btn mb-2 btn-outline-black">View Project Details</a>-->
+                            <img src="https://via.placeholder.com/250x250"
+                                 data-mdb-img="https://via.placeholder.com/450x450" alt="Image"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                        </div>
+                    </div>
+                </div>

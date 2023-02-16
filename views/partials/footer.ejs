@@ -1,0 +1,73 @@
+<footer
+        class="text-center text-lg-start text-white bg-dark">
+    <!--            style="background-color: #3e4551"-->
+
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="mb-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-8 col-md-6 mb-4 mb-md-0">
+                    <div class="bg-white p-2" style="width: 210px;">
+                        <img src="/img/navLogo.png" class="img-fluid" alt="logo">
+                    </div>
+
+                    <p>
+                        <strong>Our Mission Statement:</strong>
+                        <br>
+                        We are an established and respected steel fabricator and erector dedicated to our clients, vendors, and employees; providing quality, performance and value through Christ centered principles.
+                    </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center">
+                    <h5 class="text-uppercase">Main</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="/" class="text-white">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about" class="text-white">About</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="text-white">Contact</a>
+                        </li>
+                        <li>
+                            <a href="/projects" class="text-white">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <div class="text-center">
+                <% if(loggedIn){ %>
+                    <a href="/staffAccount" class="text-white-50 fw-bold">Admin Page</a> /
+                    <a href="/logout" class="text-white-50 fw-bold">Logout</a>
+                <% } else{ %>
+                    <a href="/register" class="text-white-50 fw-bold">Admin Registration</a> /
+                    <a href="/login" class="text-white-50 fw-bold">Admin Login</a>
+                <% } %>
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+    >
+        © 2023 Copyright:
+        <a class="text-white" href="#"
+        >MetalWeldSpecialties.com</a
+        >
+    </div>
+    <!-- Copyright -->
+</footer>
