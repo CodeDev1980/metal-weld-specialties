@@ -11,7 +11,7 @@ const app = express();
 const server = require('http')
 const { http, https } = require('follow-redirects');
 
-http.get('http://localhost:3000', response => {
+http.get('http://localhost:3000/', response => {
     response.on('data', chunk => {
         console.log(chunk);
     });
@@ -19,7 +19,7 @@ http.get('http://localhost:3000', response => {
     console.error(err);
 });
 
-https.get('https://express-developer.herokuapp.com/', response => {
+https.get('https://metal-weld-specialties.herokuapp.com/', response => {
     response.on('data', chunk => {
         console.log(chunk);
     });
