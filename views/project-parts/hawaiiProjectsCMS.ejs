@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <p class="lead">Remember to include a photo of the project, details, and the location</p>
     <div class="row justify-content-center text-dark mb-5">
-        <div class="col-md-12">
+        <div class="col-md-8 p-2">
             <form action="/store/hawaii" method="POST" enctype="multipart/form-data">
                 <!-- Name input -->
                 <div class="row mb-3">
@@ -30,6 +30,17 @@
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
             </form>
+        </div>
+        <div class="col-md-4 p-2">
+            <h4>Latest Post</h4>
+            <img src="<%= hawaii[i].image %>" class="img-fluid" alt="<%= hawaii[i].title %>" />
+            <p>
+                Project: <%= hawaii[i].title %> <br>
+                Posted On: <%= hawaii[i].datePosted.toLocaleString() %>
+            </p>
+            <hr>
+            <a href="/singleHawaii/<%= hawaii[i]._id %>" class="btn btn-info">View Project</a>
+            <a href="/delete/hawaii/<%= hawaii[i]._id %>" class="btn btn-warning">Delete It</a>
         </div>
     </div>
 </div>
