@@ -19,7 +19,7 @@ http.get('https://metal-weld-specialties.herokuapp.com/', response => {
     console.error(err);
 });
 
-https.get('https://metal-weld-specialties.herokuapp.com/', response => {
+https.get('http://localhost:3000/', response => {
     response.on('data', chunk => {
         console.log(chunk);
     });
