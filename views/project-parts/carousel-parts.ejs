@@ -1,55 +1,111 @@
-<div class="col-lg-12 p-2 text-center mb-7">
-    <h2 class="display-5">Our Projects In Arizona</h2>
-    <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
-        <% for(i=0; i < arizonaPost.length; i++){ %>
-            <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
-                <a href="/singleArizona/<%= arizonaPost[i]._id %>">
-                    <img src="<%= arizonaPost[i].image %>"
-                         class="img-fluid w-100" alt="<%= arizonaPost[i].title %>">
-                </a>
-            </div>
-        <% } %>
-    </div>
-</div>
+<!-- Tabs navs -->
+<ul class="nav nav-tabs mb-3 justify-content-center align-items-center text-center" id="ex1" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link active"
+                id="ex1-tab-1"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-1"
+                role="tab"
+                aria-controls="ex1-tabs-1"
+                aria-selected="true"
+        >ARIZONA</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-2"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-2"
+                role="tab"
+                aria-controls="ex1-tabs-2"
+                aria-selected="false"
+        >NEVADA</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-3"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-3"
+                role="tab"
+                aria-controls="ex1-tabs-3"
+                aria-selected="false"
+        >HAWAII</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-4"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-4"
+                role="tab"
+                aria-controls="ex1-tabs-3"
+                aria-selected="false"
+        >CALIFORNIA</a
+        >
+    </li>
+</ul>
+<!-- Tabs navs -->
 
-<div class="col-lg-12 p-2 text-center mb-7">
-    <h2 class="display-5">Our Projects In Nevada</h2>
-    <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
-        <% for(i=0; i < nevadaPost.length; i++){ %>
-            <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
-                <a href="/singleNevada/<%= nevadaPost[i]._id %>">
-                    <img src="<%= nevadaPost[i].image %>"
-                         class="img-fluid w-100" alt="<%= nevadaPost[i].title %>">
-                </a>
-            </div>
-        <% } %>
+<!-- Tabs content -->
+<div class="tab-content" id="ex1-content">
+    <div
+            class="tab-pane fade show active"
+            id="ex1-tabs-1"
+            role="tabpanel"
+            aria-labelledby="ex1-tab-1"
+    >
+        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
+            <% for(i=0; i < arizonaPost.length; i++){ %>
+                <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
+                    <a href="/singleArizona/<%= arizonaPost[i]._id %>">
+                        <img src="<%= arizonaPost[i].image %>"
+                             class="img-fluid w-100" alt="<%= arizonaPost[i].title %>">
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
+            <% for(i=0; i < nevadaPost.length; i++){ %>
+                <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
+                    <a href="/singleNevada/<%= nevadaPost[i]._id %>">
+                        <img src="<%= nevadaPost[i].image %>"
+                             class="img-fluid w-100" alt="<%= nevadaPost[i].title %>">
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
+            <% for(i=0; i < hawaiiPost.length; i++){ %>
+                <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
+                    <a href="/singleHawaii/<%= hawaiiPost[i]._id %>">
+                        <img src="<%= hawaiiPost[i].image %>"
+                             class="img-fluid w-100" alt="<%= hawaiiPost[i].title %>">
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4">
+        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
+            <% for(i=0; i < californiaPost.length; i++){ %>
+                <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
+                    <a href="/singleCalifornia/<%= californiaPost[i]._id %>">
+                        <img src="<%= californiaPost[i].image %>"
+                             class="img-fluid w-100" alt="<%= californiaPost[i].title %>">
+                    </a>
+                </div>
+            <% } %>
+        </div>
     </div>
 </div>
+<!-- Tabs content -->
 
-<div class="col-lg-12 p-2 text-center mb-7">
-    <h2 class="display-5">Our Projects In Hawaii</h2>
-    <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
-        <% for(i=0; i < hawaiiPost.length; i++){ %>
-            <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
-                <a href="/singleHawaii/<%= hawaiiPost[i]._id %>">
-                    <img src="<%= hawaiiPost[i].image %>"
-                         class="img-fluid w-100" alt="<%= hawaiiPost[i].title %>">
-                </a>
-            </div>
-        <% } %>
-    </div>
-</div>
-
-<div class="col-lg-12 p-2 text-center">
-    <h2 class="display-5">Our Projects In California</h2>
-    <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
-        <% for(i=0; i < californiaPost.length; i++){ %>
-            <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
-                <a href="/singleCalifornia/<%= californiaPost[i]._id %>">
-                    <img src="<%= californiaPost[i].image %>"
-                         class="img-fluid w-100" alt="<%= californiaPost[i].title %>">
-                </a>
-            </div>
-        <% } %>
-    </div>
-</div>
