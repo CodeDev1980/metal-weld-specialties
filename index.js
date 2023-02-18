@@ -7,9 +7,16 @@ const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const expressSession = require('express-session');
 const flash = require('connect-flash');
-const app = express();
 const server = require('http')
 const { http, https } = require('follow-redirects');
+const app = express();const shouldCompress = (req, res) => {
+    if (req.headers['x-no-compression']) {
+        // Will not compress responses, if this header is present
+        return false;
+    }
+    // Resort to standard compression
+    return compression.filter(req, res);
+};
 
 http.get('http://localhost:3000/', response => {
     response.on('data', chunk => {
@@ -26,6 +33,19 @@ https.get('https://metal-weld-specialties.herokuapp.com/', response => {
 }).on('error', err => {
     console.error(err);
 });
+
+const compression = require('compression');
+
+// Compress all HTTP responses
+app.use(compression({
+    // filter: Decide if the answer should be compressed or not,
+    // depending on the 'shouldCompress' function above
+    filter: shouldCompress,
+    // threshold: It is the byte threshold for the response
+    // body size before considering compression, the default is 1 kB
+    threshold: 0
+}));
+
 
 require('dotenv').config();
 app.use(express.static(path.join(__dirname, 'public')));
@@ -62,6 +82,8 @@ const port = process.env.PORT;
 app.get('http://localhost:3000',  (req, res, next) => {
     res.redirect(301, 'http://localhost:8080)');
 });
+
+
 app.listen(port || 3300, () => {
     console.log(`App listening on ${port}`)
 });
