@@ -1,6 +1,6 @@
 <!-- Tabs navs -->
 <ul class="nav nav-tabs mb-3 justify-content-center align-items-center text-center" id="ex1" role="tablist">
-    <li class="nav-item" role="presentation">
+    <li class="nav-item" role="presentation" itemprop="ArizonaProject">
         <a
                 class="nav-link active"
                 id="ex1-tab-1"
@@ -12,7 +12,7 @@
         ><h5>ARIZONA</h5></a
         >
     </li>
-    <li class="nav-item" role="presentation">
+    <li class="nav-item" role="presentation" itemprop="NevadaProject">
         <a
                 class="nav-link"
                 id="ex1-tab-2"
@@ -24,7 +24,7 @@
         ><h5>NEVADA</h5></a
         >
     </li>
-    <li class="nav-item" role="presentation">
+    <li class="nav-item" role="presentation" itemprop="HawaiiProject">
         <a
                 class="nav-link"
                 id="ex1-tab-3"
@@ -36,7 +36,7 @@
         ><h5>HAWAII</h5></a
         >
     </li>
-    <li class="nav-item" role="presentation">
+    <li class="nav-item" role="presentation" itemprop="CaliforniaProject">
         <a
                 class="nav-link"
                 id="ex1-tab-4"
@@ -52,14 +52,14 @@
 <!-- Tabs navs -->
 
 <!-- Tabs content -->
-<div class="tab-content" id="ex1-content">
+<div class="tab-content" id="ex1-content" itemprop="projects" itemscope itemtype="ProjectDetails">
     <div
             class="tab-pane fade show active"
             id="ex1-tabs-1"
             role="tabpanel"
             aria-labelledby="ex1-tab-1"
     >
-        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
+        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2" itemprop="ArizonaDetails">
             <% for(i=0; i < arizonaPost.length; i++){ %>
                 <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
                     <a href="/singleArizona/<%= arizonaPost[i]._id %>">
@@ -71,7 +71,7 @@
         </div>
     </div>
     <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
+        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2" itemprop="NevadaDetails">
             <% for(i=0; i < nevadaPost.length; i++){ %>
                 <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
                     <a href="/singleNevada/<%= nevadaPost[i]._id %>">
@@ -83,7 +83,7 @@
         </div>
     </div>
     <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
+        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2" itemprop="HawaiiDetails">
             <% for(i=0; i < hawaiiPost.length; i++){ %>
                 <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
                     <a href="/singleHawaii/<%= hawaiiPost[i]._id %>">
@@ -95,7 +95,7 @@
         </div>
     </div>
     <div class="tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4">
-        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2">
+        <div class="row justify-content-center align-items-center text-center mx-auto d-flex py-3 me-2" itemprop="CaliforniaDetails">
             <% for(i=0; i < californiaPost.length; i++){ %>
                 <div class="my-3 hover-zoom text-center" style="max-width: 22rem;">
                     <a href="/singleCalifornia/<%= californiaPost[i]._id %>">

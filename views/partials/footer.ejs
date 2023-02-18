@@ -44,14 +44,23 @@
                 <!--Grid column-->
 
             </div>
-            <div class="text-center">
+            <hr>
+            <div class="mb-md-0 text-center">
                 <% if(loggedIn){ %>
                     <a href="/staffAccount" class="text-white-50 fw-bold">Admin Page</a> /
                     <a href="/logout" class="text-white-50 fw-bold">Logout</a>
                 <% } else{ %>
                   
-                    <a href="/login" class="text-white-50 fw-bold">Admin Login</a>
+                    <a href="/login" class="text-white-50 fw-bold m-2">Admin Login</a>
                 <% } %>
+                    <span itemscope itemtype="https://express-developer.herokuapp.com/contact">
+                        <a href="https://express-developer.herokuapp.com/contact"
+                           itemprop="DeveloperContact"
+                           target="_blank"
+                           class="text-white-50 m-2">
+                            Contact Developer
+                        </a>
+                    </span>
             </div>
             <!--Grid row-->
         </section>
