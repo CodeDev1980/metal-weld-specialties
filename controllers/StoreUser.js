@@ -6,10 +6,10 @@ module.exports = (req, res) => {
             const validationErrors = Object.keys(error.errors).map(key => error.errors[key].message)
             req.flash('validationErrors', validationErrors)
             req.flash('data', req.body)
-            return res.redirect('/register')
+            return res.redirect(301,'/register')
         }
         else {
-            return res.redirect('/login')
+            return res.redirect(301,'/login')
         }
     })
 }

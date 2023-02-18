@@ -9,6 +9,6 @@ module.exports = (req, res) => {
             image: '/uploads/' + image.name,
             userid: req.session.userId
         })
-        res.redirect('/projects')
+        res.redirect(301,'/projects')
     })
 }
