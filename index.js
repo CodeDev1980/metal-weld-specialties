@@ -18,7 +18,7 @@ const app = express();const shouldCompress = (req, res) => {
     return compression.filter(req, res);
 };
 
-http.get('http://metal-weld-specialties.herokuapp.com/', response => {
+http.get('http://metal-weld.com/', response => {
     response.on('data', chunk => {
         console.log(chunk);
     });
@@ -26,7 +26,7 @@ http.get('http://metal-weld-specialties.herokuapp.com/', response => {
     console.error(err);
 });
 
-https.get('https://metal-weld-specialties.herokuapp.com/', response => {
+https.get('https://metal-weld.com/', response => {
     response.on('data', chunk => {
         console.log(chunk);
     });
