@@ -18,7 +18,7 @@ const app = express();const shouldCompress = (req, res) => {
     return compression.filter(req, res);
 };
 
-http.get('http://localhost:3000/', response => {
+http.get('http://metal-weld-specialties.herokuapp.com/', response => {
     response.on('data', chunk => {
         console.log(chunk);
     });
@@ -79,8 +79,8 @@ if(mongoose){
 
 
 const port = process.env.PORT;
-app.get('http://localhost:3000',  (req, res, next) => {
-    res.redirect(301, 'http://localhost:8080)');
+app.get('https://metal-weld-specialties.herokuapp.com/',  (req, res, next) => {
+    res.redirect(301, 'https://metal-weld-specialties.herokuapp.com/');
 });
 
 
