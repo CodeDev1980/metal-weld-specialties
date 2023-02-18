@@ -23,7 +23,7 @@ http.createServer((req, res, next) => {
     res.end();
 });
 
-http.get('http://metal-weld.com/', response => {
+http.get('http://metal-weld-specialties.herokuapp.com/', response => {
     response.on('data', chunk => {
         console.log(chunk);
     });
@@ -31,7 +31,7 @@ http.get('http://metal-weld.com/', response => {
     console.error(err);
 });
 
-https.get('https://metal-weld.com/', response => {
+https.get('https://metal-weld-specialties.herokuapp.com/'|| 'https://www.metal-weld-specialties.herokuapp.com/', response => {
     response.on('data', chunk => {
         console.log(chunk);
     });
