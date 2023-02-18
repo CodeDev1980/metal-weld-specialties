@@ -1,0 +1,13 @@
+Sitemap: https://metal-weld-specialties.herokuapp.com/sitemap.xml
+Sitemap: https://www.metal-weld-specialties.herokuapp.com/sitemap.xml
+
+User-agent: *
+Disallow: /calendar/
+Disallow: /junk/
+Disallow: /books/fiction/contemporary/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: *
+Disallow: /
