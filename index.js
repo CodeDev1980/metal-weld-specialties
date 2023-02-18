@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const expressSession = require('express-session');
 const flash = require('connect-flash');
+const favicon = require('serve-favicon')
 const server = require('http')
 const { http, https } = require('follow-redirects');
 const app = express();const shouldCompress = (req, res) => {
@@ -67,7 +68,7 @@ let setCache = function (req, res, next) {
 app.use(setCache)
 
 require('dotenv').config();
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, 'public', 'img', 'navLogo.png')))
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.json());
 app.set('view engine', 'ejs');
