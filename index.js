@@ -18,6 +18,11 @@ const app = express();const shouldCompress = (req, res) => {
     return compression.filter(req, res);
 };
 
+http.createServer((req, res, next) => {
+    res.writeHead(301, {'Location' : 'https://metal-weld-specialties.herokuapp.com/'});
+    res.end();
+});
+
 http.get('http://metal-weld.com/', response => {
     response.on('data', chunk => {
         console.log(chunk);
