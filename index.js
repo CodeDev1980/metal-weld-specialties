@@ -79,10 +79,6 @@ if(mongoose){
 
 
 const port = process.env.PORT;
-app.get('https://metal-weld-specialties.herokuapp.com/',  (req, res, next) => {
-    res.redirect(301, 'https://metal-weld-specialties.herokuapp.com/');
-});
-
 
 app.listen(port || 3300, () => {
     console.log(`App listening on ${port}`)

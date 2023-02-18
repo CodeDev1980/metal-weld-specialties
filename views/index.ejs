@@ -13,121 +13,30 @@
       <!-- Navbar -->
       <%- include('partials/navBar') -%>
       <!-- Navbar -->
-
-      <!--Section: Design Block-->
-      <section itemprop="Metal-Weld Specialties">
-        <!-- Intro -->
-        <div id="intro" class="bg-image vh-100"
-             style="background: url('/assets/clubhouse.jpg') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;">
-
-          <div class="mask" style="background-color: rgba(72, 76, 99, 0.5);">
-            <div class="container-fluid">
-              <div class="row row-cols-auto d-flex justify-content-center align-items-center intro-height" style="height: 100vh;">
-               
-                <div class="col-md-10" itemid="Company Info">
-                  <!--        class="text-bg-dark p-3" style="opacity: 0.8;"          -->
-                  <div>
-                    <div class="row">
-                      <div class="col-md-12 text-start">
-                        <img src="/img/60years.png" style="height: 110px; width: 110px;" class="img-fluid" alt="img">
-                      </div>
-                      <div class="col-md-12">
-                        <h1 class="display-4 fw-bold text-uppercase text-white my-2">Metal-Weld Specialties</h1>
-                        <hr class="mb-3" style="opacity: 1; color: white; width: 280px;">
-                      </div>
-                    </div>
-              
-                    <h3 class="fw-bold text-white mb-3"> Fabricating & Erecting for America's most recognized corporations since 1961.</h3>
-                    <div>
-                      <a href="/contact" class="btn btn-primary btn-lg m-2">Contact Us</a>
-                      <a href="/about" class="btn btn-outline-white btn-lg m-2">About Us</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Intro -->
-      </section>
-      <!--Section: Design Block-->
+      <!-- Container for demo purpose -->
+      <%- include('home-parts/home-intro-banner') -%>
+      <!-- Container for demo purpose -->
     </header>
 
     <!--Section: Design Block-->
     <!-- Container for demo purpose -->
     <div class="container my-4 py-5">
 
-      <!--Section: Design Block-->
-      <section class="text-center mb-9" itemprop="Our Experience">
+      <!-- Container for demo purpose -->
+      <%- include('home-parts/section2') -%>
+      <!-- Container for demo purpose -->
 
-        <h3 class="mb-5">Our Experience Meets Your Needs Head On</h3>
+      <!-- Container for demo purpose -->
+      <%- include('home-parts/chooseUs') -%>
+      <!-- Container for demo purpose -->
 
-        <p class="mb-5 mx-auto w-responsive">
-          When It comes to metal fabrication, we have done it for 60 plus years. So, when you have a project in mind and only want the most trusted and reliable service in town,
-          give us a call.
-        </p>
+      <!-- Container for demo purpose -->
+      <%- include('home-parts/home-projects') -%>
+      <!-- Container for demo purpose -->
 
-        <div class="row">
-          <div class="col-md-4 mb-4 mb-md-0" itemid="Experience">
-            <i class="fas fa-cubes fa-3x text-primary mt-3"></i>
-            <h5 class="card-title my-4">Family Owned & Operated</h5>
-            <p class="card-text mb-3">
-              Hands down, we are among the highest quality of metal welding and fabrication at our office locations.
-            </p>
-          </div>
-          <div class="col-md-4 mb-4 mb-md-0" itemid="Community">
-            <i class="fas fa-users fa-3x text-primary mt-3"></i>
-            <h5 class="card-title my-4">Client Focused</h5>
-            <p class="card-text mb-3">
-              All of our workers and offices are licensed in the work that they do and highly experienced in providing quality.
-            </p>
-          </div>
-          <div class="col-md-4 mb-0" itemid="Our Trades">
-            <i class="fas fa-tools fa-3x text-primary mt-3"></i>
-            <h5 class="card-title my-4">AISC Certified</h5>
-            <p class="card-text mb-3">
-              Not only do we build up our community, we also get involved. We ensure that our structures last for many years.
-            </p>
-          </div>
-        </div>
-
-      </section>
-      <!--Section: Design Block-->
-
-      <section class="container-fluid text-center mb-9">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 p-3">
-            <div>
-              <div class="text-center">
-
-                <h2 class="h1">Why Choose Us?</h2>
-                <p class="text-muted">
-                  Metal-Weld Specialties, Inc. is located in Peoria Arizona and has been family owned and operated since 1962. We adhere to the highest quality standards in the industry. Our team of professionals deliver high quality, complex steel projects to owners, general contractors and developers in Arizona, California, Hawaii and Nevada.
-
-                </p>
-                <a
-                        class="btn btn-primary btn-lg"
-                        href="/projects"
-                        role="button"
-                >View Projects</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12 p-3">
-            <div class="d-flex justify-content-center align-items-center" style="height: 45vh;">
-              <img src="/assets/playaVista-lasVegasNv.jpg"
-                   class="img-fluid rounded shadow-lg" alt="img">
-            </div>
-          </div>
-        </div>
-
-      </section>
-
+      <!-- Container for demo purpose -->
+      <%- include('home-parts/section4') -%>
+      <!-- Container for demo purpose -->
 
       <!-- Container for demo purpose -->
       <%- include('home-parts/contact-section') -%>
@@ -142,11 +51,7 @@
 
     <!-- End your project here-->
   </body>
-
-  <!-- MDB ESSENTIAL -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- MDB PLUGINS -->
-  <script type="text/javascript" src="plugins/js/all.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript"></script>
+  <!-- Footer -->
+  <%- include('partials/scripts') -%>
+  <!-- Footer -->
 </html>
