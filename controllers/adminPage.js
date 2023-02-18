@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
     const user = await UsersDB.find({}).limit(1).sort({_id: -1});
 
     res.render('staffAccount', {
-        title: "Metal-Weld Staff",
+        title: "Metal-Weld Staff CMS Page",
         nevada, hawaii, arizona, california, user
     })
 }
