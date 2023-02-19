@@ -8,12 +8,12 @@ const fileUpload = require('express-fileupload');
 const expressSession = require('express-session');
 const flash = require('connect-flash');
 const server = require('http')
-const RewriteMiddleware = require('express-htaccess-middleware');
-const RewriteOptions = {
-    file: path.resolve(__dirname, '.htaccess'),
-    verbose: (process.env.ENV_NODE == 'development'),
-    watch: (process.env.ENV_NODE == 'development'),
-};
+// const RewriteMiddleware = require('express-htaccess-middleware');
+// const RewriteOptions = {
+//    file: path.resolve(__dirname, '.htaccess'),
+//    verbose: (process.env.ENV_NODE == 'development'),
+//    watch: (process.env.ENV_NODE == 'development'),
+// };
 const { http, https } = require('follow-redirects');
 const app = express();const shouldCompress = (req, res) => {
     if (req.headers['x-no-compression']) {
@@ -59,7 +59,7 @@ app.use(compression({
 
 let setCache = function (req, res, next) {
     // here you can define period in second, this one is 5 minutes
-    const period = 60 * 5
+    const period = 60 * 10
 
     // you only want to cache for GET requests
     if (req.method === 'GET') {
@@ -86,7 +86,7 @@ app.use(express.static(__dirname + '/public', {
     }
 }))
 
-app.use(RewriteMiddleware(RewriteOptions));
+// app.use(RewriteMiddleware(RewriteOptions));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.json());
 app.set('view engine', 'ejs');
