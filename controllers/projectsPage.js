@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
     const arizonaPost = await ArizonaDB.find({}).limit(20).sort({_id: -1}).populate('userid');
     const californiaPost = await CaliforniaDB.find({}).limit(20).sort({_id: -1}).populate('userid');
 
-    res.render('projects', {
+    res.render(200, 'projects', {
         title: "View Metal-Weld Projects & Their Individual Details.",
         nevadaPost, hawaiiPost, arizonaPost, californiaPost
     })
