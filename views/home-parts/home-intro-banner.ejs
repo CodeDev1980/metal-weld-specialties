@@ -27,8 +27,12 @@
 
                             <h3 class="fw-bold text-white mb-3" itemprop="slogan"> Fabricating & Erecting for America's most recognized corporations since 1961.</h3>
                             <div>
-                                <a href="/contact" class="btn btn-primary btn-lg m-2">Contact Us</a>
-                                <a href="/about" class="btn btn-outline-white btn-lg m-2">About Us</a>
+                                <% if(loggedIn){ %>
+                                  <a href="/staffAccount" class="btn btn-primary btn-lg m-2">cms panel</a>
+                                <% } else { %>
+                                  <a href="/contact" class="btn btn-primary btn-lg m-2">Contact Us</a>
+                                  <a href="/about" class="btn btn-outline-white btn-lg m-2">About Us</a>
+                                <% } %>
                             </div>
                         </div>
                     </div>
