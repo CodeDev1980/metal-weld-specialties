@@ -4,8 +4,6 @@ const homeController = require('../controllers/homePage');
 const aboutController = require('../controllers/aboutPage');
 const contactController = require('../controllers/contactPage');
 // Users
-// const registerUserController = require('../controllers/registerUser');
-// const storeUserController = require('../controllers/StoreUser');
 const loginController = require('../controllers/login');
 const loginUserController = require('../controllers/loginUser');
 const staffUserController = require('../controllers/adminPage');
@@ -36,8 +34,6 @@ router.get('/', homeController);
 router.get('/about', aboutController);
 router.get('/contact', contactController);
 // Users
-// router.get('/register', redirect, registerUserController);
-// router.post('/store/user', storeUserController);
 router.get('/login', redirect, loginController);
 router.post('/login/user', loginUserController);
 router.get('/staffAccount', authorized, staffUserController)

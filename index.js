@@ -7,88 +7,12 @@ const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const expressSession = require('express-session');
 const flash = require('connect-flash');
-const server = require('http')
-// const RewriteMiddleware = require('express-htaccess-middleware');
-// const RewriteOptions = {
-//    file: path.resolve(__dirname, '.htaccess'),
-//    verbose: (process.env.ENV_NODE == 'development'),
-//    watch: (process.env.ENV_NODE == 'development'),
-// };
-const { http, https } = require('follow-redirects');
-const app = express();const shouldCompress = (req, res) => {
-    if (req.headers['x-no-compression']) {
-        // Will not compress responses, if this header is present
-        return false;
-    }
-    // Resort to standard compression
-    return compression.filter(req, res);
-};
-
-// http.createServer((req, res, next) => {
-//    res.writeHead(301, {'Location' : 'https://metal-weld-specialties.herokuapp.com/'});
-//    res.end();
-// });
-
-http.get('http://metal-weld-specialties.herokuapp.com/', response => {
-    response.on('data', chunk => {
-        console.log(chunk);
-    });
-}).on('error', err => {
-    console.error(err);
-});
-
-https.get('https://metal-weld-specialties.herokuapp.com/'|| 'https://www.metal-weld-specialties.herokuapp.com/', response => {
-    response.on('data', chunk => {
-        console.log(chunk);
-    });
-}).on('error', err => {
-    console.error(err);
-});
-
-const compression = require('compression');
-
-// Compress all HTTP responses
-app.use(compression({
-    // filter: Decide if the answer should be compressed or not,
-    // depending on the 'shouldCompress' function above
-    filter: shouldCompress,
-    // threshold: It is the byte threshold for the response
-    // body size before considering compression, the default is 1 kB
-    threshold: 0
-}));
-
-let setCache = function (req, res, next) {
-    // here you can define period in second, this one is 5 minutes
-    const period = 60 * 10
-
-    // you only want to cache for GET requests
-    if (req.method === 'GET') {
-        res.set('Cache-control', `public, max-age=${period}`)
-    } else {
-        // for the other requests set strict no caching parameters
-        res.set('Cache-control', `no-store`)
-    }
-
-    // remember to call next() to pass on the request
-    next()
-}
-
-// now call the new middleware function in your app
-
-app.use(setCache)
+const app = express();
 
 require('dotenv').config();
-
-app.use(express.static(__dirname + '/public', {
-    maxAge: 86400000,
-    setHeaders: function(res, path) {
-        res.setHeader("Expires", new Date(Date.now() + 2592000000*30).toUTCString());
-    }
-}))
-
-// app.use(RewriteMiddleware(RewriteOptions));
-app.use(express.static(path.join(__dirname, 'node_modules')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}))
@@ -117,7 +41,6 @@ if(mongoose){
 
 
 const port = process.env.PORT;
-
 app.listen(port || 3300, () => {
     console.log(`App listening on ${port}`)
 });
