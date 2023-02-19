@@ -24,10 +24,10 @@ const app = express();const shouldCompress = (req, res) => {
     return compression.filter(req, res);
 };
 
-http.createServer((req, res, next) => {
-    res.writeHead(301, {'Location' : 'https://metal-weld-specialties.herokuapp.com/'});
-    res.end();
-});
+// http.createServer((req, res, next) => {
+//    res.writeHead(301, {'Location' : 'https://metal-weld-specialties.herokuapp.com/'});
+//    res.end();
+// });
 
 http.get('http://metal-weld-specialties.herokuapp.com/', response => {
     response.on('data', chunk => {
@@ -78,12 +78,14 @@ let setCache = function (req, res, next) {
 app.use(setCache)
 
 require('dotenv').config();
+
 app.use(express.static(__dirname + '/public', {
     maxAge: 86400000,
     setHeaders: function(res, path) {
         res.setHeader("Expires", new Date(Date.now() + 2592000000*30).toUTCString());
     }
 }))
+
 app.use(RewriteMiddleware(RewriteOptions));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.json());
