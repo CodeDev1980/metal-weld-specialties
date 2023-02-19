@@ -1,0 +1,14 @@
+.spread {
+    letter-spacing: 30px;
+}
+.line {
+    opacity: 1; color: black; width: 280px; margin-left: auto; margin-right: auto;
+}
+
+.space {
+    margin-top: 160px; margin-bottom: 30px;
+}
+
+.contact-height {
+    height: 10rem;
+}
