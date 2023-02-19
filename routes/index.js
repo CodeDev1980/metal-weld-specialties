@@ -49,22 +49,22 @@ router.get('/logout', logoutUserController);
 // Projects
 router.get('/projects', projectsPage);
 // Arizona Projects
-router.post('/store/arizona', storeArizonaController);
+router.post('/store/arizona', authorized, storeArizonaController);
 router.get('/delete/arizona/:id', deleteArizonaController);
 router.get('/arizonaProjects', arizonaProjectController);
 router.get('/singleArizona/:id', singleArizonaController)
 // Nevada Projects
-router.post('/store/nevada', storeNevadaController);
+router.post('/store/nevada', authorized, storeNevadaController);
 router.get('/delete/nevada/:id', deleteNevadaController);
 router.get('/nevadaProjects', nevadaProjectController);
 router.get('/singleNevada/:id', singleNevadaController)
 // California Projects
-router.post('/store/california', storeCaliforniaController);
+router.post('/store/california', authorized, storeCaliforniaController);
 router.get('/delete/california/:id', deleteCaliforniaController);
 router.get('/californiaProjects', CaliforniaProjectController);
 router.get('/singleCalifornia/:id', singleCaliforniaController);
 // Hawaii Projects
-router.post('/store/hawaii', storeHawaiiController);
+router.post('/store/hawaii', authorized, storeHawaiiController);
 router.get('/delete/hawaii/:id', deleteHawaiiController);
 router.get('/hawaiiProjects', hawaiiProjectController);
 router.get('/singleHawaii/:id', singleHawaiiController);

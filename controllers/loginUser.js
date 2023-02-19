@@ -11,7 +11,7 @@ module.exports = (req, res) => {
                     req.session.userId = user._id
                     res.redirect('/staffAccount')
                 } else {
-                    res.redirect(301, '/login')
+                    res.redirect('/login')
                 }
                 console.log(error)
             })
