@@ -1,3 +1,5 @@
+const Users = require('../models/Users');
+
 module.exports = async (req, res) => {
 
     res.render('index', {
