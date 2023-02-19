@@ -1,0 +1,26 @@
+<Directory "/opt/bitnami/Metal-Weld/cache">
+    Deny from all
+  </Directory>
+  <Directory "/opt/bitnami/Metal-Weld/images">
+    # Protect against bug 28235
+    <IfModule rewrite_module>
+      RewriteEngine On
+      RewriteCond %{QUERY_STRING} \.[^\\/:*?\x22<>|%]+(#|\?|$) [nocase]
+      RewriteRule . - [forbidden]
+    </IfModule>
+  </Directory>
+  <Directory "/opt/bitnami/Metal-Weld/includes">
+    Deny from all
+  </Directory>
+  <Directory "/opt/bitnami/Metal-Weld/languages">
+    Deny from all
+  </Directory>
+  <Directory "/opt/bitnami/Metal-Weld/maintenance">
+    Deny from all
+  </Directory>
+  <Directory "/opt/bitnami/Metal-Weld/maintenance/archives">
+    Deny from all
+  </Directory>
+  <Directory "/opt/bitnami/Metal-Weld/serialized">
+    Deny from all
+  </Directory>

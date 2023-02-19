@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-    res.render(200,'contact', {
+    res.render('contact', {
         title: "Contact Metal-Weld for Assistance & Quotes"
     })
 }

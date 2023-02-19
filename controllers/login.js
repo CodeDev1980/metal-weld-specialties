@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-    res.render(200,'login', {
+    res.render('login', {
         title: "Metal-Weld Staff Login Page"
     })
 }
