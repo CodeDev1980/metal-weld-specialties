@@ -9,7 +9,7 @@ const expressSession = require('express-session');
 const flash = require('connect-flash');
 const app = express();
 const { https } = require('follow-redirects');
-https.get('https://metal-weld-specialties.herokuapp.com/', 'https://wwww.metal-weld-specialties.herokuapp.com/', response => {
+https.get('https://metal-weld-specialties.herokuapp.com/', 'https://metal-weld.com/', response => {
     response.on('data', chunk => {
         console.log(chunk);
     });
