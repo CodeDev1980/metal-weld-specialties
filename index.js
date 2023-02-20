@@ -56,7 +56,4 @@ app.listen(port || 3300, cache("10 minutes"), () => {
 
 app.use('/', router);
 
-app.use((req, res, next) => {
-  res.status(404).render('notFound'))
-}) 
-next()
+app.use((req, res) => res.render('notFound'))
