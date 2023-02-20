@@ -17,6 +17,13 @@
 <div class="container-fluid my-5 py-5">
     <!-- Container for demo purpose only -->
     <div class="container text-center pt-5" itemscope itemtype ="Projects">
+        <% if(loggedIn){ %>
+            <% for(i=0; i < user.length; i++) { %>
+                <p class="fw-bold lead text-warning text-center mb-4">
+                    Welcome <%= user[i].username %>, today is <span id="welcome"></span>
+                </p>
+            <% } %>
+        <% } %>
         <br>
         <h1 class="display-3">Metal-Weld Specialties</h1>
         <h4>We have four locations that service across the United States, they are in Arizona, California, Nevada & Hawaii.</h4>

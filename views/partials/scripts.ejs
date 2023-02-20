@@ -4,7 +4,14 @@
 <!-- MDB PLUGINS -->
 <script type="text/javascript" src="/plugins/js/all.min.js"></script>
 <!-- Custom scripts -->
-<script type="text/javascript"></script>
+<script type="text/javascript">
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+    document.getElementById("welcome").innerHTML = dateTime;
+</script>
 <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="

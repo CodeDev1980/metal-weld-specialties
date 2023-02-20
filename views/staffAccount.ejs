@@ -17,6 +17,12 @@
 </div>
 <!-- Tabs navs -->
 
+<% for(i=0; i < user.length; i++) { %>
+  <p class="fw-bold lead text-warning text-center mt-4  text-center">
+    Welcome <%= user[i].username %>, today is <span id="welcome"></span>
+  </p>
+<% } %>
+
 <!-- Tabs content -->
 <div class="tab-content" id="ex1-content">
   <div
