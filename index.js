@@ -8,6 +8,14 @@ const fileUpload = require('express-fileupload');
 const expressSession = require('express-session');
 const flash = require('connect-flash');
 const app = express();
+const { https } = require('follow-redirects');
+https.get('https://metal-weld-specialties.herokuapp.com/', 'https://wwww.metal-weld-specialties.herokuapp.com/', response => {
+    response.on('data', chunk => {
+        console.log(chunk);
+    });
+}).on('error', err => {
+    console.error(err);
+});
 
 require('dotenv').config();
 app.use(express.static(path.join(__dirname, 'public')));
@@ -39,9 +47,10 @@ if(mongoose){
     console.log('No DB connected')
 }
 
-
+const cacheService = require("express-api-cache");
+const cache = cacheService.cache;
 const port = process.env.PORT;
-app.listen(port || 3300, () => {
+app.listen(port || 3300, cache("10 minutes"), () => {
     console.log(`App listening on ${port}`)
 });
 
