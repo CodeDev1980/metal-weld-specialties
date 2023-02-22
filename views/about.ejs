@@ -25,6 +25,10 @@
                     border-top-left-radius: 0.75rem;
                     border-top-right-radius: 0.75rem;
                 }
+                .max-img-space {
+                    width: 100%;
+                    height: 650px;
+                }
                 @media (min-width: 992px) {
                     .rounded-tr-lg-0 {
                         border-top-right-radius: 0;
@@ -33,11 +37,23 @@
                         border-bottom-left-radius: 0.75rem;
                     }
                 }
+                @media(max-width:968px){
+                    .max-img-space {
+                        width: 100%;
+                        height: 550px;
+                    }
+                }
+                @media(max-width:768px){
+                    .max-img-space {
+                        width: 100%;
+                        height: 450px;
+                    }
+                }
             </style>
             <div class="card rounded-6 shadow-3-soft" style="background-color: #fff9f2">
                 <div class="row g-0 d-flex align-items-center" itemscope itemtype ="about">
                     <div class="col-lg-6 col-xl-5" itemprop="AboutImage">
-                        <img src="/assets/luckyDragon2-lasvegasnv.jpg" alt="about us" class="w-100 rounded-t-2-5 rounded-tr-lg-0 rounded-bl-lg-2-5"/>
+                        <img src="/assets/luckyDragon2-lasvegasnv.jpg" alt="about us" class="max-img-space rounded-t-2-5 rounded-tr-lg-0 rounded-bl-lg-2-5"/>
                     </div>
                     <div class="col-lg-6 col-xl-7" itemprop="description">
                         <div class="card-body py-4 py-md-5 py-lg-4 py-xl-5 px-md-5">
