@@ -15,8 +15,15 @@
 <!--Section: Design Block-->
 <!-- Container for demo purpose -->
 <div class="container-fluid my-3 py-4">
+    <div class="row text-center mb-4">
+        <div class="col-md-12 p-2">
+            <a href="#" class="urlCopy">
+                <span class="text-dark font-weight-bold">Share This Project Page <i class="fas fa-share-alt"></i></span>
+            </a>
+        </div>
+    </div>
     <!-- Container for demo purpose only -->
-    <div class="container text-center pt-5" itemscope itemtype ="Projects">
+    <div class="container text-center" itemscope itemtype ="Projects">
         <% if(loggedIn){ %>
             <% for(i=0; i < user.length; i++) { %>
                 <h2 class="text-warning text-center mb-3">

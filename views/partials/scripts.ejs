@@ -16,3 +16,14 @@
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
         crossorigin="anonymous"></script>
+<script>
+    var $temp = $("<input>");
+    var $url = $(location).attr('href');
+    $('.urlCopy').on('click', function() {
+        $("body").append($temp);
+        $temp.val($url).select();
+        document.execCommand("copy");
+        $temp.remove();
+        $("span").text("URL copied!");
+    })
+</script>

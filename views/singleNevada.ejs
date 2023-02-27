@@ -13,12 +13,17 @@
 </header>
 
 <!--Main layout-->
-<main style="margin-top: 100px; margin-bottom: 70px;">
+<main style="margin-top: 70px; margin-bottom: 70px;">
     <div class="container my-5">
-        <div class="row mb-4">
-            <div class="col-md-12 text-left">
+        <div class="row mb-4 text-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 p-2">
                 <a href="/projects" class="text-dark zoom font-weight-bold">
                     <i class="far fa-arrow-alt-circle-left"></i> All Projects
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 p-2">
+                <a href="#" class="urlCopy">
+                    <span class="text-dark font-weight-bold">Share This Post <i class="fas fa-share-alt"></i></span>
                 </a>
             </div>
         </div>
@@ -37,13 +42,15 @@
                     </p>
                 </div>
                 <div class="col-md-6 p-2">
-                    <img src="<%= nevada.image %>" height="100%" width="100%" class="img-fluid rounded shadow-lg" alt="<%= nevada.title %>">
-                    <p class="text-dark mt-3">
-                        Date Posted: <%= nevada.datePosted.toLocaleString() %>, By <%= nevada.userid.username %>
-                    </p>
-                    <% if(loggedIn){ %>
-                        <a href="/delete/nevada/<%= nevada._id %>" class="btn btn-warning btn-large">Delete Post</a>
-                    <% } %>
+                    <div class="sticky-top">
+                        <img src="<%= nevada.image %>" height="100%" width="100%" class="img-fluid rounded shadow-lg" alt="<%= nevada.title %>">
+                        <p class="text-dark mt-3">
+                            Date Posted: <%= nevada.datePosted.toLocaleString() %>, By <%= nevada.userid.username %>
+                        </p>
+                        <% if(loggedIn){ %>
+                            <a href="/delete/nevada/<%= nevada._id %>" class="btn btn-warning btn-large">Delete Post</a>
+                        <% } %>
+                    </div>
                 </div>
             </div>
         </div>
